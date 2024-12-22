@@ -3,11 +3,13 @@ import { ArrowRight, Code, Server, Laptop, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { TypewriterEffect } from "@/components/TypewriterEffect";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-background via-background to-accent-foreground/10 dark:from-background dark:via-background dark:to-accent-foreground/10 p-4 sm:p-8">
-      <div className="max-w-4xl w-full mx-auto text-center space-y-8">
+      <Navbar />
+      <div className="max-w-4xl w-full mx-auto text-center space-y-8 pt-20">
         <div className="relative group">
           <h1 className="relative text-4xl md:text-6xl font-bold tracking-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 font-extrabold">
