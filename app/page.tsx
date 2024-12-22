@@ -49,7 +49,7 @@ export default function Home() {
                 alt="GitHub" 
                 width={32} 
                 height={32} 
-                className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 dark:invert dark:opacity-80 dark:hover:opacity-100"
               />
             </Link>
             <Link 
@@ -64,7 +64,7 @@ export default function Home() {
                 alt="LinkedIn" 
                 width={32} 
                 height={32} 
-                className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 dark:invert dark:opacity-80 dark:hover:opacity-100"
               />
             </Link>
           </div>
