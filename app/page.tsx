@@ -4,12 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { TypewriterEffect } from "@/components/TypewriterEffect";
 import { Navbar } from "@/components/Navbar";
-import { ParticleBackground } from "@/components/ParticleBackground";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-background via-background to-accent-foreground/10 dark:from-background dark:via-background dark:to-accent-foreground/10 p-4 sm:p-8 relative overflow-hidden">
-      <ParticleBackground />
       <Navbar />
       <div className="max-w-4xl w-full mx-auto text-center space-y-8 pt-20 relative z-10">
         <div className="relative group">
