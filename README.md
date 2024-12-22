@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+This is a portfolio website for myself to showcase my projects and skills. My portfolio is built using Next.js 15, Tailwind CSS & Shadcn UI. My name is Zaid Hafeez am I am a MENN Stack developer. I am a self-taught developer and I am currently learning Next.js and Tailwind CSS. I am also a student at the Virtual University of Pakistan (VUP).
 
-First, run the development server:
+## Design
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I want it to be inspired by Vercel's web design and use framer motion for animations & transitions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Projects
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🚀 Featured Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### 1. Portfolio Website
+- **Technologies:** Next.js 15, Tailwind CSS, Shadcn UI, Framer Motion
+- **Description:** A modern, responsive personal portfolio showcasing my development skills and projects
+- **Key Features:**
+  - Responsive design
+  - Smooth animations and transitions
+  - Vercel-inspired UI/UX
 
-## Learn More
+#### 2. [Project Name]
+- **Technologies:** [Tech Stack]
+- **Description:** Brief description of the project
+- **Key Features:**
+  - Feature 1
+  - Feature 2
 
-To learn more about Next.js, take a look at the following resources:
+#### 3. [Project Name]
+- **Technologies:** [Tech Stack]
+- **Description:** Brief description of the project
+- **Key Features:**
+  - Feature 1
+  - Feature 2
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Skills
+- **Frontend:** Next.js, React, Tailwind CSS, HTML5, CSS3
+- **Backend:** Node.js, Express.js, MongoDB
+- **Tools:** Git, VS Code, Figma
+- **Soft Skills:** Problem Solving, Quick Learning, Team Collaboration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+- **Email:** [your.email@example.com]
+- **LinkedIn:** [Your LinkedIn Profile]
+- **GitHub:** [Your GitHub Profile]
