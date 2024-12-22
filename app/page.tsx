@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Server, Laptop, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { TypewriterEffect } from "@/components/TypewriterEffect";
 
 export default function Home() {
   return (
@@ -16,8 +17,12 @@ export default function Home() {
               <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-primary animate-spin-slow animate-pulse-subtle" />
             </span>
           </h1>
-          <p className="mt-4 text-xl text-muted-foreground animate-pulse-slow tracking-wide font-medium text-balance">
-            MENN Stack Developer | Next.js & Tailwind Enthusiast
+          <p className="mt-4 text-xl text-muted-foreground tracking-wide font-medium text-balance">
+            <TypewriterEffect 
+              text="MENN Stack Developer | Next.js & Tailwind CSS Enthusiast" 
+              className="inline-block"
+              speed={100}
+            />
           </p>
         </div>
 
