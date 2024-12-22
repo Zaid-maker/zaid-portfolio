@@ -26,30 +26,43 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex justify-center space-x-4">
-          <Button asChild variant="outline" size="lg">
+        <div className="flex justify-center items-center space-x-4">
+          <Button asChild variant="outline" size="lg" className="group">
             <Link href="/projects" className="flex items-center gap-2 font-semibold">
-              View Projects <ArrowRight className="w-4 h-4" />
+              View Projects 
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
           
-          <div className="flex items-center space-x-2">
-            <Link href="https://github.com/Zaid-maker" target="_blank" className="hover:opacity-80 transition-opacity">
+          <div className="flex items-center space-x-4">
+            <Link 
+              href="https://github.com/Zaid-maker" 
+              target="_blank" 
+              className="group relative"
+              aria-label="GitHub Profile"
+            >
+              <div className="absolute -inset-1 bg-primary/20 rounded-full opacity-0 group-hover:opacity-75 transition-opacity duration-300 blur-sm"></div>
               <Image 
                 src="/github-icon.svg" 
                 alt="GitHub" 
-                width={24} 
-                height={24} 
-                className="w-6 h-6"
+                width={32} 
+                height={32} 
+                className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
               />
             </Link>
-            <Link href="https://linkedin.com/in/zaid-hafeez-7084b0149" target="_blank" className="hover:opacity-80 transition-opacity">
+            <Link 
+              href="https://linkedin.com/in/zaid-hafeez-7084b0149" 
+              target="_blank" 
+              className="group relative"
+              aria-label="LinkedIn Profile"
+            >
+              <div className="absolute -inset-1 bg-primary/20 rounded-full opacity-0 group-hover:opacity-75 transition-opacity duration-300 blur-sm"></div>
               <Image 
                 src="/linkedin-icon.svg" 
                 alt="LinkedIn" 
-                width={24} 
-                height={24} 
-                className="w-6 h-6"
+                width={32} 
+                height={32} 
+                className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
               />
             </Link>
           </div>
