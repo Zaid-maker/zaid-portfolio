@@ -98,27 +98,43 @@ export default function Home() {
         </div>
 
         {/* About Me Section */}
-        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl">
-          <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight">
+        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl 
+          transform transition-all duration-300 ease-in-out 
+          hover:-translate-y-1 
+          hover:shadow-2xl 
+          hover:bg-white/15 
+          dark:hover:bg-white/10">
+          <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight group">
             <span className="relative">
               About Me
-              <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full 
+                group-hover:w-full 
+                transition-all duration-300"></span>
             </span>
           </h2>
-
-          <p className="mt-6 text-muted-foreground leading-relaxed text-center text-balance max-w-2xl mx-auto mb-6">
+          
+          <p className="mt-6 text-muted-foreground leading-relaxed text-center text-balance max-w-2xl mx-auto mb-6 
+            group-hover:text-foreground 
+            transition-colors 
+            duration-300">
             <span className="font-semibold text-foreground">
               As a driven developer,
             </span>{" "}
             I thrive on
-            <span className="italic text-primary/80">
+            <span className="italic text-primary/80 
+              group-hover:text-primary 
+              transition-colors 
+              duration-300">
               crafting exceptional web experiences
             </span>{" "}
             that push the boundaries of innovation.{" "}
             <span className="font-medium text-foreground/80">My journey</span>{" "}
             is defined by a relentless pursuit of growth, where each project is
             an opportunity to
-            <span className="font-semibold text-primary">
+            <span className="font-semibold text-primary 
+              group-hover:text-primary/80 
+              transition-colors 
+              duration-300">
               transform ideas into impactful digital solutions
             </span>
             .
@@ -126,51 +142,60 @@ export default function Home() {
         </div>
 
         {/* Skills Section */}
-        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl">
-          <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight">
+        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl 
+          transform transition-all duration-300 ease-in-out 
+          hover:-translate-y-1 
+          hover:shadow-2xl 
+          hover:bg-white/15 
+          dark:hover:bg-white/10">
+          <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight group">
             <span className="relative">
               Skills
-              <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full 
+                group-hover:w-full 
+                transition-all duration-300"></span>
             </span>
           </h2>
-
+          
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="flex flex-col items-center space-y-3 group">
-              <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
-                <Code className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+            {[
+              { 
+                icon: Code, 
+                title: "Frontend Development", 
+                description: "Crafting responsive and interactive web interfaces using Next.js, React, and Tailwind CSS" 
+              },
+              { 
+                icon: Server, 
+                title: "Backend Development", 
+                description: "Building scalable server-side applications with Node.js, Express, and MongoDB" 
+              },
+              { 
+                icon: Laptop, 
+                title: "Learning & Growth", 
+                description: "Continuously expanding skills at Virtual University of Pakistan, embracing new technologies" 
+              }
+            ].map((skill, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col items-center space-y-3 group 
+                  transform transition-all duration-300 
+                  hover:-translate-y-2 
+                  hover:scale-105 
+                  hover:shadow-lg 
+                  p-4 
+                  rounded-xl"
+              >
+                <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
+                  <skill.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                  {skill.title}
+                </h3>
+                <p className="text-muted-foreground text-center text-sm group-hover:text-foreground transition-colors leading-relaxed text-balance">
+                  {skill.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold group-hover:text-primary transition-colors tracking-tight">
-                Frontend Development
-              </h3>
-              <p className="text-muted-foreground text-center text-sm group-hover:text-foreground transition-colors leading-relaxed text-balance">
-                Crafting responsive and interactive web interfaces using
-                Next.js, React, and Tailwind CSS
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-3 group">
-              <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
-                <Server className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg font-semibold group-hover:text-primary transition-colors tracking-tight">
-                Backend Development
-              </h3>
-              <p className="text-muted-foreground text-center text-sm group-hover:text-foreground transition-colors leading-relaxed text-balance">
-                Building scalable server-side applications with Node.js,
-                Express, and MongoDB
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-3 group">
-              <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
-                <Laptop className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg font-semibold group-hover:text-primary transition-colors tracking-tight">
-                Learning & Growth
-              </h3>
-              <p className="text-muted-foreground text-center text-sm group-hover:text-foreground transition-colors leading-relaxed text-balance">
-                Continuously expanding skills at Virtual University of Pakistan,
-                embracing new technologies
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -187,22 +212,34 @@ export default function Home() {
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="bg-white/5 dark:bg-white/10 rounded-xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 group"
+                className="bg-white/5 dark:bg-white/10 rounded-xl p-6 border border-white/10 
+                  hover:border-primary/30 
+                  transform hover:-translate-y-2 
+                  transition-all duration-300 
+                  ease-in-out 
+                  group 
+                  hover:shadow-xl 
+                  hover:bg-white/10 
+                  dark:hover:bg-white/20 
+                  scale-100 
+                  hover:scale-105"
               >
                 <div className="flex items-center mb-4">
-                  <GitBranch className="w-6 h-6 text-primary mr-2" />
+                  <GitBranch className="w-6 h-6 text-primary mr-2 group-hover:rotate-45 transition-transform duration-300" />
                   <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
                     {project.name}
                   </h3>
                 </div>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4 group-hover:text-foreground transition-colors">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex} 
-                      className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full"
+                      className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full 
+                        group-hover:bg-primary/20 
+                        transition-colors"
                     >
                       {tech}
                     </span>
@@ -210,7 +247,9 @@ export default function Home() {
                 </div>
                 <Link 
                   href={project.link} 
-                  className="text-primary hover:underline flex items-center text-sm"
+                  className="text-primary hover:underline flex items-center text-sm 
+                    group-hover:translate-x-1 
+                    transition-transform"
                 >
                   View Project <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
@@ -220,16 +259,27 @@ export default function Home() {
         </div>
 
         {/* Contact Section */}
-        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl">
+        <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl 
+          transform transition-all duration-300 ease-in-out 
+          hover:-translate-y-1 
+          hover:shadow-2xl 
+          hover:bg-white/15 
+          dark:hover:bg-white/10 
+          group">
           <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight">
             <span className="relative">
               Get In Touch
-              <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full 
+                group-hover:w-full 
+                transition-all duration-300"></span>
             </span>
           </h2>
 
           <div className="max-w-xl mx-auto">
-            <p className="text-muted-foreground text-center mb-6">
+            <p className="text-muted-foreground text-center mb-6 
+              group-hover:text-foreground 
+              transition-colors 
+              duration-300">
               Interested in collaborating or have a project in mind? 
               I&apos;m always open to exciting opportunities and challenges.
             </p>
@@ -237,10 +287,17 @@ export default function Home() {
               <Button 
                 asChild 
                 size="lg" 
-                className="group bg-primary hover:bg-primary/90 transition-colors"
+                className="group bg-primary hover:bg-primary/90 transition-colors 
+                  transform hover:-translate-y-1 
+                  hover:scale-105 
+                  duration-300 
+                  ease-in-out"
               >
-                <Link href="mailto:zaidhafeez.dev@gmail.com" className="flex items-center">
-                  <Send className="mr-2 w-5 h-5" /> Contact Me
+                <Link 
+                  href="mailto:zaidhafeez.dev@gmail.com" 
+                  className="flex items-center"
+                >
+                  <Send className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform" /> Contact Me
                 </Link>
               </Button>
             </div>
