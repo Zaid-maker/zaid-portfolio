@@ -11,45 +11,48 @@ export default {
   theme: {
   	extend: {
   		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
+  			// Unique Color Palette
+  			background: {
+  				DEFAULT: 'hsl(220, 13%, 16%)',  // Deep Charcoal
+  				light: 'hsl(220, 15%, 20%)',    // Slightly Lighter Charcoal
+  				dark: 'hsl(220, 10%, 10%)'      // Deeper Charcoal
   			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
+  			foreground: {
+  				DEFAULT: 'hsl(0, 0%, 95%)',     // Soft White
+  				muted: 'hsl(0, 0%, 70%)'        // Muted Gray
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
+  				DEFAULT: 'hsl(210, 78%, 45%)',  // Deep Ocean Blue
+  				light: 'hsl(210, 70%, 50%)',    // Brighter Blue
+  				dark: 'hsl(210, 80%, 40%)'      // Deeper Blue
   			},
   			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
+  				DEFAULT: 'hsl(290, 74%, 50%)',  // Deep Purple
+  				light: 'hsl(290, 70%, 55%)',    // Brighter Purple
+  				dark: 'hsl(290, 80%, 45%)'      // Deeper Purple
   			},
   			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
+  				DEFAULT: 'hsl(340, 74%, 55%)',  // Vibrant Magenta
+  				light: 'hsl(340, 70%, 60%)',    // Brighter Magenta
+  				dark: 'hsl(340, 80%, 50%)'      // Deeper Magenta
   			},
+  			muted: {
+  				DEFAULT: 'hsl(215, 20%, 25%)',  // Soft Muted Gray
+  				foreground: 'hsl(215, 20%, 40%)' // Muted Foreground
+  			},
+  			border: 'hsl(220, 15%, 25%)',       // Border Color
+  			input: 'hsl(220, 15%, 30%)',        // Input Background
+  			ring: 'hsl(210, 70%, 50%)',         // Focus Ring
   			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
+  				DEFAULT: 'hsl(0, 84%, 60%)',    // Bright Red
+  				foreground: 'hsl(0, 0%, 100%)' // White Text on Red
   			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
   			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
+  				'1': 'hsl(10, 80%, 60%)',   // Warm Orange
+  				'2': 'hsl(190, 95%, 50%)',  // Bright Cyan
+  				'3': 'hsl(280, 70%, 55%)',  // Deep Violet
+  				'4': 'hsl(50, 95%, 55%)',   // Vibrant Yellow
+  				'5': 'hsl(130, 60%, 50%)'   // Fresh Green
   			}
   		},
   		keyframes: {
@@ -67,9 +70,16 @@ export default {
   			'pulse-subtle': 'pulseSlight 3s ease-in-out infinite'
   		},
   		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
+  			lg: '0.5rem',
+  			md: 'calc(0.5rem - 2px)',
+  			sm: 'calc(0.5rem - 4px)'
+  		},
+  		// Custom Gradient Backgrounds
+  		backgroundImage: {
+  			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+  			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+  			'tech-gradient': 'linear-gradient(135deg, hsl(210, 78%, 45%), hsl(290, 74%, 50%), hsl(340, 74%, 55%))',
+  			'subtle-gradient': 'linear-gradient(to right, hsl(220, 13%, 16%), hsl(220, 15%, 20%))'
   		}
   	},
   },

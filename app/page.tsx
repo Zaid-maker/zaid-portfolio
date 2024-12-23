@@ -29,23 +29,25 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center 
-      bg-gradient-to-br from-background via-background to-accent-foreground/10 
-      dark:from-background dark:via-background dark:to-accent-foreground/10 
-      p-4 sm:p-8 relative overflow-hidden">
+      bg-tech-gradient 
+      dark:bg-tech-gradient 
+      p-4 sm:p-8 
+      relative 
+      overflow-hidden">
       <Navbar />
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl w-full mx-auto text-center space-y-8 pt-20 relative z-10">
           {/* Hero Section */}
           <div className="relative group">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70 font-extrabold">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 via-orange-500 font-extrabold">
                 Zaid Hafeez
               </span>
               <span className="absolute top-0 right-0 transform translate-x-2 -translate-y-2 opacity-30">
-                <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-primary animate-spin-slow animate-pulse-subtle" />
+                <Sparkles className="w-8 h-8 md:w-12 md:h-12 text-accent animate-spin-slow animate-pulse-subtle" />
               </span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg md:text-xl text-muted-foreground tracking-wide font-medium text-balance">
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-foreground-muted tracking-wide font-medium text-balance">
               <TypewriterEffect
                 text="MENN Stack Developer | Next.js & Tailwind CSS Enthusiast"
                 className="inline-block"
@@ -56,13 +58,23 @@ export default function Home() {
 
           {/* Buttons and Social Links */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button asChild variant="outline" size="lg" className="group w-full sm:w-auto">
+            <Button 
+              asChild 
+              variant="outline" 
+              size="lg" 
+              className="group w-full sm:w-auto 
+                border-primary/30 
+                hover:border-primary 
+                bg-background-light 
+                hover:bg-background-dark 
+                transition-all duration-300"
+            >
               <Link
                 href="/projects"
-                className="flex items-center justify-center gap-2 font-semibold"
+                className="flex items-center justify-center gap-2 font-semibold text-foreground hover:text-primary"
               >
                 View Projects
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-accent" />
               </Link>
             </Button>
             
@@ -79,7 +91,12 @@ export default function Home() {
                   alt="GitHub"
                   width={32}
                   height={32}
-                  className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 dark:invert dark:opacity-80 dark:hover:opacity-100"
+                  className="w-8 h-8 relative z-10 
+                    grayscale group-hover:grayscale-0 
+                    scale-100 group-hover:scale-110 
+                    transition-all duration-300 
+                    dark:invert dark:opacity-80 
+                    dark:hover:opacity-100"
                 />
               </Link>
 
@@ -89,113 +106,100 @@ export default function Home() {
                 className="group relative"
                 aria-label="LinkedIn Profile"
               >
-                <div className="absolute -inset-1 bg-primary/20 rounded-full opacity-0 group-hover:opacity-75 transition-opacity duration-300 blur-sm"></div>
+                <div className="absolute -inset-1 bg-secondary/20 rounded-full opacity-0 group-hover:opacity-75 transition-opacity duration-300 blur-sm"></div>
                 <Image
                   src="/linkedin-icon.svg"
                   alt="LinkedIn"
                   width={32}
                   height={32}
-                  className="w-8 h-8 relative z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 dark:invert dark:opacity-80 dark:hover:opacity-100"
+                  className="w-8 h-8 relative z-10 
+                    grayscale group-hover:grayscale-0 
+                    scale-100 group-hover:scale-110 
+                    transition-all duration-300 
+                    dark:invert dark:opacity-80 
+                    dark:hover:opacity-100"
                 />
               </Link>
             </div>
           </div>
 
           {/* About Me Section */}
-          <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl 
-            transform transition-all duration-300 ease-in-out 
-            hover:-translate-y-1 
-            hover:shadow-2xl 
-            hover:bg-white/15 
-            dark:hover:bg-white/10">
-            <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight group">
-              <span className="relative">
-                About Me
-                <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full 
-                  group-hover:w-full 
-                  transition-all duration-300"></span>
-              </span>
+          <div className="bg-background-light dark:bg-background-dark 
+            backdrop-blur-md 
+            rounded-xl 
+            border border-border/30 
+            p-6 md:p-10 
+            shadow-2xl 
+            hover:shadow-primary/20 
+            transition-all 
+            duration-300 
+            group">
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 text-foreground tracking-tight">
+              About Me
             </h2>
             
-            <p className="mt-6 text-muted-foreground leading-relaxed text-center text-balance max-w-2xl mx-auto mb-6 
-              group-hover:text-foreground 
-              transition-colors 
-              duration-300">
-              <span className="font-semibold text-foreground">
-                As a driven developer,
-              </span>{" "}
-              I thrive on
-              <span className="italic text-primary/80 
-                group-hover:text-primary 
-                transition-colors 
-                duration-300">
-                crafting exceptional web experiences
-              </span>{" "}
-              that push the boundaries of innovation.{" "}
-              <span className="font-medium text-foreground/80">My journey</span>{" "}
-              is defined by a relentless pursuit of growth, where each project is
-              an opportunity to
-              <span className="font-semibold text-primary 
-                group-hover:text-primary/80 
-                transition-colors 
-                duration-300">
-                transform ideas into impactful digital solutions
-              </span>
-              .
+            <p className="text-sm sm:text-base text-foreground-muted leading-relaxed text-center max-w-2xl mx-auto">
+              As a driven developer, I thrive on crafting exceptional web experiences 
+              that push the boundaries of innovation. My journey is defined by a relentless 
+              pursuit of growth, where each project is an opportunity to transform ideas 
+              into impactful digital solutions.
             </p>
           </div>
 
           {/* Skills Section */}
-          <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl 
-            transform transition-all duration-300 ease-in-out 
-            hover:-translate-y-1 
-            hover:shadow-2xl 
-            hover:bg-white/15 
-            dark:hover:bg-white/10">
-            <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight group">
-              <span className="relative">
-                Skills
-                <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full 
-                  group-hover:w-full 
-                  transition-all duration-300"></span>
-              </span>
+          <div className="bg-background-light dark:bg-background-dark 
+            backdrop-blur-md 
+            rounded-xl 
+            border border-border/30 
+            p-6 md:p-10 
+            shadow-2xl 
+            hover:shadow-secondary/20 
+            transition-all 
+            duration-300 
+            group">
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 text-foreground tracking-tight">
+              Skills
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {[
                 { 
                   icon: Code, 
                   title: "Frontend Development", 
-                  description: "Crafting responsive and interactive web interfaces using Next.js, React, and Tailwind CSS" 
+                  description: "Crafting responsive interfaces with Next.js, React, Tailwind CSS",
+                  color: "text-primary"
                 },
                 { 
                   icon: Server, 
                   title: "Backend Development", 
-                  description: "Building scalable server-side applications with Node.js, Express, and MongoDB" 
+                  description: "Building scalable apps with Node.js, Express, MongoDB",
+                  color: "text-secondary"
                 },
                 { 
                   icon: Laptop, 
                   title: "Learning & Growth", 
-                  description: "Continuously expanding skills at Virtual University of Pakistan, embracing new technologies" 
+                  description: "Continuously expanding skills at Virtual University of Pakistan",
+                  color: "text-accent"
                 }
               ].map((skill, index) => (
                 <div 
                   key={index} 
-                  className="flex flex-col items-center space-y-3 group 
-                    transform transition-all duration-300 
-                    hover:-translate-y-2 
+                  className="flex flex-col items-center space-y-3 p-4 
+                    bg-background/5 
+                    rounded-xl 
+                    border border-border/20 
+                    hover:border-primary/30 
+                    transform hover:-translate-y-2 
                     hover:scale-105 
-                    hover:shadow-lg 
-                    p-4 
-                    rounded-xl"
+                    transition-all 
+                    duration-300 
+                    group"
                 >
-                  <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
-                    <skill.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-                  </div>
-                  <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                  <skill.icon className={`w-6 sm:w-8 h-6 sm:h-8 ${skill.color} group-hover:scale-110 transition-transform`} />
+                  <h3 className="text-base sm:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                     {skill.title}
                   </h3>
-                  <p className="text-muted-foreground text-center text-sm group-hover:text-foreground transition-colors leading-relaxed text-balance">
+                  <p className="text-xs sm:text-sm text-foreground-muted text-center group-hover:text-foreground transition-colors">
                     {skill.description}
                   </p>
                 </div>
@@ -204,46 +208,51 @@ export default function Home() {
           </div>
 
           {/* Projects Section */}
-          <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl">
-            <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight">
-              <span className="relative">
-                Projects
-                <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full"></span>
-              </span>
+          <div className="bg-background-light dark:bg-background-dark 
+            backdrop-blur-md 
+            rounded-xl 
+            border border-border/30 
+            p-6 md:p-10 
+            shadow-2xl 
+            hover:shadow-accent/20 
+            transition-all 
+            duration-300 
+            group">
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 text-foreground tracking-tight">
+              Projects
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {projects.map((project, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/5 dark:bg-white/10 rounded-xl p-6 border border-white/10 
+                  className="bg-background/5 
+                    rounded-xl 
+                    p-4 sm:p-6 
+                    border border-border/20 
                     hover:border-primary/30 
-                    transform hover:-translate-y-2 
-                    transition-all duration-300 
-                    ease-in-out 
-                    group 
-                    hover:shadow-xl 
-                    hover:bg-white/10 
-                    dark:hover:bg-white/20 
-                    scale-100 
-                    hover:scale-105"
+                    transform 
+                    transition-all 
+                    duration-300 
+                    hover:-translate-y-2 
+                    hover:scale-105 
+                    hover:shadow-lg 
+                    group"
                 >
-                  <div className="flex items-center mb-4">
-                    <GitBranch className="w-6 h-6 text-primary mr-2 group-hover:rotate-45 transition-transform duration-300" />
-                    <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <GitBranch className="w-4 sm:w-6 h-4 sm:h-6 text-secondary mr-2 group-hover:rotate-45 transition-transform" />
+                    <h3 className="text-base sm:text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
                       {project.name}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm mb-4 group-hover:text-foreground transition-colors">
+                  <p className="text-xs sm:text-sm text-foreground-muted mb-3 sm:mb-4 group-hover:text-foreground transition-colors">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
                     {project.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex} 
-                        className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full 
-                          group-hover:bg-primary/20 
-                          transition-colors"
+                        className="bg-primary/10 text-primary text-[10px] sm:text-xs px-2 py-1 rounded-full hover:bg-primary/20 transition-colors"
                       >
                         {tech}
                       </span>
@@ -251,11 +260,9 @@ export default function Home() {
                   </div>
                   <Link 
                     href={project.link} 
-                    className="text-primary hover:underline flex items-center text-sm 
-                      group-hover:translate-x-1 
-                      transition-transform"
+                    className="text-primary hover:underline flex items-center text-xs sm:text-sm group-hover:translate-x-1 transition-transform"
                   >
-                    View Project <ArrowRight className="ml-1 w-4 h-4" />
+                    View Project <ArrowRight className="ml-1 w-3 h-3 sm:w-4 sm:h-4" />
                   </Link>
                 </div>
               ))}
@@ -263,27 +270,22 @@ export default function Home() {
           </div>
 
           {/* Contact Section */}
-          <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 p-6 md:p-10 shadow-2xl 
-            transform transition-all duration-300 ease-in-out 
-            hover:-translate-y-1 
-            hover:shadow-2xl 
-            hover:bg-white/15 
-            dark:hover:bg-white/10 
+          <div className="bg-background-light dark:bg-background-dark 
+            backdrop-blur-md 
+            rounded-xl 
+            border border-border/30 
+            p-6 md:p-10 
+            shadow-2xl 
+            hover:shadow-accent/20 
+            transition-all 
+            duration-300 
             group">
-            <h2 className="relative text-2xl font-bold mb-6 text-foreground tracking-tight">
-              <span className="relative">
-                Get In Touch
-                <span className="absolute -bottom-1 left-0 w-1/2 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full 
-                  group-hover:w-full 
-                  transition-all duration-300"></span>
-              </span>
+            <h2 className="text-xl sm:text-2xl font-bold mb-6 text-foreground tracking-tight">
+              Get In Touch
             </h2>
 
             <div className="max-w-xl mx-auto">
-              <p className="text-muted-foreground text-center mb-6 
-                group-hover:text-foreground 
-                transition-colors 
-                duration-300">
+              <p className="text-xs sm:text-base text-foreground-muted text-center mb-6 group-hover:text-foreground transition-colors">
                 Interested in collaborating or have a project in mind? 
                 I&apos;m always open to exciting opportunities and challenges.
               </p>
@@ -291,17 +293,23 @@ export default function Home() {
                 <Button 
                   asChild 
                   size="lg" 
-                  className="group bg-primary hover:bg-primary/90 transition-colors 
-                    transform hover:-translate-y-1 
+                  className="w-full sm:w-auto 
+                    group 
+                    bg-accent 
+                    hover:bg-accent-light 
+                    text-white 
+                    transition-colors 
+                    transform 
+                    hover:-translate-y-1 
                     hover:scale-105 
                     duration-300 
                     ease-in-out"
                 >
                   <Link 
                     href="mailto:zaidhafeez.dev@gmail.com" 
-                    className="flex items-center"
+                    className="flex items-center justify-center"
                   >
-                    <Send className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform" /> Contact Me
+                    <Send className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-12 transition-transform" /> Contact Me
                   </Link>
                 </Button>
               </div>
