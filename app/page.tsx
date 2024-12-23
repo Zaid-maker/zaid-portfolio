@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Server, Laptop, Sparkles, GitBranch, Award, Send } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
-import { TypewriterEffect } from "@/components/TypewriterEffect";
 import { Navbar } from "@/components/Navbar";
+import { TypewriterEffect } from "@/components/TypewriterEffect";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Code, GitBranch, Laptop, Send, Server, Sparkles } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const projects = [
@@ -231,7 +231,7 @@ export default function Home() {
           <div className="max-w-xl mx-auto">
             <p className="text-muted-foreground text-center mb-6">
               Interested in collaborating or have a project in mind? 
-              I'm always open to exciting opportunities and challenges.
+              I&apos;m always open to exciting opportunities and challenges.
             </p>
             <div className="flex justify-center">
               <Button 
