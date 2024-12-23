@@ -1,44 +1,85 @@
-# Portfolio
+# 🚀 Zaid Hafeez - Personal Portfolio
 
-This is a portfolio website for myself to showcase my projects and skills. My portfolio is built using Next.js 15, Tailwind CSS & Shadcn UI. My name is Zaid Hafeez am I am a MENN Stack developer. I am a self-taught developer and I am currently learning Next.js and Tailwind CSS. I am also a student at the Virtual University of Pakistan (VUP).
+## 📝 Overview
+A modern, responsive personal portfolio website showcasing my skills, projects, and professional journey. Built with cutting-edge web technologies to provide an engaging and interactive user experience.
 
-## Design
+## 🌟 Features
 
-I want it to be inspired by Vercel's web design and use framer motion for animations & transitions.
+### 🎨 Design
+- Unique, dynamic color palette
+- Responsive and adaptive layout
+- Scroll-activated navbar
+- Dark/Light mode toggle
+- Smooth transitions and interactions
 
-## Projects
+### 💻 Technologies
+- **Frontend**: Next.js 15
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **Deployment**: Vercel
 
-### 🚀 Featured Projects
+## 🛠 Key Components
 
-#### 1. Portfolio Website
-- **Technologies:** Next.js 15, Tailwind CSS, Shadcn UI, Framer Motion
-- **Description:** A modern, responsive personal portfolio showcasing my development skills and projects
-- **Key Features:**
-  - Responsive design
-  - Smooth animations and transitions
-  - Vercel-inspired UI/UX
+### Color Palette
+Custom color scheme with dynamic gradients:
+- Primary: Deep Ocean Blue
+- Secondary: Deep Purple
+- Accent: Vibrant Magenta
+- Adaptive dark/light mode colors
 
-#### 2. [Project Name]
-- **Technologies:** [Tech Stack]
-- **Description:** Brief description of the project
-- **Key Features:**
-  - Feature 1
-  - Feature 2
+### Responsive Navigation
+- Scroll-activated background
+- Dynamic styling
+- Mobile-friendly menu
+- Theme toggle integration
 
-#### 3. [Project Name]
-- **Technologies:** [Tech Stack]
-- **Description:** Brief description of the project
-- **Key Features:**
-  - Feature 1
-  - Feature 2
+### Interactive Sections
+- Animated hero section
+- Skills showcase
+- Project highlights
+- Contact section
 
-## Skills
-- **Frontend:** Next.js, React, Tailwind CSS, HTML5, CSS3
-- **Backend:** Node.js, Express.js, MongoDB
-- **Tools:** Git, VS Code, Figma
-- **Soft Skills:** Problem Solving, Quick Learning, Team Collaboration
+## 🚀 Getting Started
 
-## Contact
-- **Email:** [your.email@example.com]
-- **LinkedIn:** [Your LinkedIn Profile]
-- **GitHub:** [Your GitHub Profile]
+### Prerequisites
+- Node.js 20+
+- npm or Bun
+
+### Installation
+1. Clone the repository
+```bash
+git clone https://github.com/Zaid-maker/portfolio.git
+cd portfolio
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+bun install
+```
+
+3. Run development server
+```bash
+npm run dev
+# or
+bun dev
+```
+
+## 🌐 Deployment
+Deployed on Vercel with automatic CI/CD pipeline.
+
+## 🤝 Contributing
+Contributions are welcome! Please check the issues page.
+
+## 📄 License
+MIT License
+
+## 🔗 Connect
+- [LinkedIn](https://linkedin.com/in/zaid-hafeez-7084b0149)
+- [GitHub](https://github.com/Zaid-maker)
+- [Personal Website](https://zaidhafeez.dev)
+
+---
+
+*Crafted with ❤️ by Zaid Hafeez*
