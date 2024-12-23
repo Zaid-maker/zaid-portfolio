@@ -12,26 +12,34 @@ export function ParticleBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas to full window size
+    // Ensure canvas covers the entire viewport
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      drawStars(); // Redraw stars on resize
+      drawStars();
     };
 
-    // Star creation function
+    // Star creation and drawing function
     const drawStars = () => {
       // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Create stars
-      const starCount = Math.floor(canvas.width / 5);
+      // Create more stars
+      const starCount = Math.floor(canvas.width / 3);
       for (let i = 0; i < starCount; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
-        const radius = Math.random() * 1.5 + 0.5;
-        const opacity = Math.random() * 0.7 + 0.3;
+        
+        // Varying star sizes
+        const radius = Math.random() * 2 + 0.5;
+        
+        // Varying star brightness
+        const opacity = Math.random() * 0.8 + 0.2;
 
+        // White stars with varying opacity
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        
         // Create radial gradient for glow effect
         const gradient = ctx.createRadialGradient(
           x, y, 0, 
@@ -39,19 +47,16 @@ export function ParticleBackground() {
         );
         gradient.addColorStop(0, `rgba(255, 255, 255, ${opacity})`);
         gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
-
-        // Draw star
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        
         ctx.fillStyle = gradient;
         ctx.fill();
       }
     };
 
-    // Initial draw
+    // Initial setup
     resizeCanvas();
 
-    // Add resize listener
+    // Resize listener
     window.addEventListener('resize', resizeCanvas);
 
     // Cleanup
@@ -63,13 +68,15 @@ export function ParticleBackground() {
   return (
     <canvas 
       ref={canvasRef} 
-      className="fixed inset-0 z-[-1] opacity-30 dark:opacity-20 pointer-events-none" 
-      style={{ 
-        width: '100%', 
-        height: '100%', 
-        position: 'absolute', 
-        top: 0, 
-        left: 0 
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: -1,
+        pointerEvents: 'none',
+        opacity: 0.3
       }}
     />
   );

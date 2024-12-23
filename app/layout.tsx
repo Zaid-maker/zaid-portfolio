@@ -26,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased relative`}>
-        <ParticleBackground />
+        <div className="absolute inset-0 -z-10">
+          <ParticleBackground />
+        </div>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
